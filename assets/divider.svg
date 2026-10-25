@@ -1,0 +1,36 @@
+<svg width="100%" height="24" viewBox="0 0 900 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5FF" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00F5FF" stop-opacity="0.8">
+        <animate attributeName="stop-opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="1">
+        <animate attributeName="stop-opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="80%" stop-color="#EC4899" stop-opacity="0.8">
+        <animate attributeName="stop-opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0" />
+    </linearGradient>
+    <filter id="divGlow" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <line x1="50" y1="12" x2="850" y2="12" stroke="url(#divGrad)" stroke-width="2" filter="url(#divGlow)" stroke-linecap="round" />
+  <circle cx="450" cy="12" r="4" fill="#00F5FF" filter="url(#divGlow)">
+    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#00F5FF;#8B5CF6;#00F5FF" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="450" cy="12" r="1.5" fill="#FFFFFF" />
+  <circle cx="350" cy="12" r="2" fill="#8B5CF6" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="550" cy="12" r="2" fill="#8B5CF6" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+</svg>

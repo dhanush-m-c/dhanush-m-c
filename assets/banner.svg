@@ -1,0 +1,180 @@
+<svg width="100%" height="100%" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="50%" stop-color="#090E1A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#00F5FF;#8B5CF6;#EC4899;#00F5FF" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.9">
+        <animate attributeName="stop-color" values="#8B5CF6;#EC4899;#00F5FF;#8B5CF6" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#3B82F6;#00F5FF;#8B5CF6;#3B82F6" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Name Hologram Gradient -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="35%" stop-color="#818CF8" />
+      <stop offset="70%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="cyanGlow" cx="15%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.25">
+        <animate attributeName="stop-opacity" values="0.15;0.35;0.15" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00F5FF" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="purpleGlow" cx="85%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.28">
+        <animate attributeName="stop-opacity" values="0.18;0.38;0.18" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Neon Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.7" stroke-opacity="0.6" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-12px) translateX(6px); opacity: 0.9; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+    @keyframes pulseTag {
+      0% { opacity: 0.7; }
+      50% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+    .particle-1 { animation: floatParticle 4s ease-in-out infinite; }
+    .particle-2 { animation: floatParticle 6s ease-in-out infinite 1s; }
+    .particle-3 { animation: floatParticle 5s ease-in-out infinite 2s; }
+    .pulse-glow { animation: pulseTag 3s ease-in-out infinite; }
+    .mono-text { font-family: 'Fira Code', 'JetBrains Mono', 'SF Mono', Consolas, monospace; }
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', Helvetica, sans-serif; }
+  </style>
+
+  <!-- Main Background Container -->
+  <rect x="2" y="2" width="896" height="256" rx="16" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Cyber Grid -->
+  <rect x="2" y="2" width="896" height="256" rx="16" fill="url(#cyberGrid)" />
+
+  <!-- Radial Ambient Lighting -->
+  <rect x="2" y="2" width="896" height="256" rx="16" fill="url(#cyanGlow)" />
+  <rect x="2" y="2" width="896" height="256" rx="16" fill="url(#purpleGlow)" />
+
+  <!-- Animated Floating Ambient Nodes -->
+  <g class="particle-1">
+    <circle cx="120" cy="70" r="3" fill="#00F5FF" filter="url(#subtleGlow)" />
+    <line x1="120" y1="70" x2="160" y2="100" stroke="#00F5FF" stroke-width="0.6" stroke-opacity="0.4" stroke-dasharray="2 3" />
+  </g>
+  <g class="particle-2">
+    <circle cx="780" cy="80" r="3.5" fill="#C084FC" filter="url(#subtleGlow)" />
+    <line x1="780" y1="80" x2="740" y2="120" stroke="#8B5CF6" stroke-width="0.6" stroke-opacity="0.4" stroke-dasharray="2 3" />
+  </g>
+  <g class="particle-3">
+    <circle cx="830" cy="180" r="2.5" fill="#38BDF8" filter="url(#subtleGlow)" />
+    <circle cx="80" cy="190" r="2.5" fill="#818CF8" filter="url(#subtleGlow)" />
+  </g>
+
+  <!-- Top Window Header Bar -->
+  <g transform="translate(24, 20)">
+    <circle cx="6" cy="6" r="5" fill="#EF4444" opacity="0.85" />
+    <circle cx="24" cy="6" r="5" fill="#F59E0B" opacity="0.85" />
+    <circle cx="42" cy="6" r="5" fill="#10B981" opacity="0.85" />
+    <text x="64" y="10" fill="#64748B" font-size="12" class="mono-text" letter-spacing="1">dhanush@portfolio:~ (main)</text>
+  </g>
+
+  <!-- Status Pill (Top Right) -->
+  <g transform="translate(620, 16)">
+    <rect x="0" y="0" width="256" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="15" cy="13" r="4" fill="#10B981" filter="url(#subtleGlow)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="17" fill="#22D3EE" font-size="11" font-weight="600" class="mono-text" letter-spacing="0.5">OPEN FOR SDE / AI ROLES</text>
+  </g>
+
+  <!-- Main Hero Content -->
+  <!-- Name -->
+  <g transform="translate(450, 108)" text-anchor="middle">
+    <!-- Glowing Underlay for Title -->
+    <text x="0" y="0" fill="#00F5FF" font-size="44" font-weight="900" class="title-text" letter-spacing="3" filter="url(#neonGlow)" opacity="0.5">DHANUSH M C</text>
+    <text x="0" y="0" fill="url(#nameGrad)" font-size="44" font-weight="900" class="title-text" letter-spacing="3">DHANUSH M C</text>
+  </g>
+
+  <!-- Subtitle / Academic Credential -->
+  <g transform="translate(450, 142)" text-anchor="middle">
+    <text x="0" y="0" fill="#94A3B8" font-size="16" font-weight="500" class="title-text" letter-spacing="1">
+      B.Tech in Computer Science Engineering <tspan fill="#818CF8">•</tspan> Artificial Intelligence &amp; Machine Learning
+    </text>
+  </g>
+
+  <!-- Tech Horizon Pills / Badges -->
+  <g transform="translate(450, 185)" text-anchor="middle">
+    <!-- Center Bracket Line -->
+    <line x1="-360" y1="0" x2="360" y2="0" stroke="#1E293B" stroke-width="1" />
+    
+    <!-- Badges -->
+    <g transform="translate(-270, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#0B132B" stroke="#00F5FF" stroke-width="1" stroke-opacity="0.5" />
+      <text x="0" y="5" fill="#38BDF8" font-size="12" font-weight="600" class="mono-text">AI &amp; ML SYSTEMS</text>
+    </g>
+
+    <g transform="translate(-90, 0)">
+      <rect x="-75" y="-14" width="150" height="28" rx="14" fill="#0B132B" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5" />
+      <text x="0" y="5" fill="#A5B4FC" font-size="12" font-weight="600" class="mono-text">BACKEND &amp; REST APIs</text>
+    </g>
+
+    <g transform="translate(90, 0)">
+      <rect x="-75" y="-14" width="150" height="28" rx="14" fill="#0B132B" stroke="#C084FC" stroke-width="1" stroke-opacity="0.5" />
+      <text x="0" y="5" fill="#E879F9" font-size="12" font-weight="600" class="mono-text">PYTHON &amp; SQL</text>
+    </g>
+
+    <g transform="translate(270, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#0B132B" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.5" />
+      <text x="0" y="5" fill="#22D3EE" font-size="12" font-weight="600" class="mono-text">DOCKER &amp; DEVOPS</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent / Terminal Prompt Preview -->
+  <g transform="translate(450, 230)" text-anchor="middle">
+    <text x="0" y="0" fill="#64748B" font-size="12" class="mono-text">
+      <tspan fill="#00F5FF">&gt;</tspan> Architecting scalable intelligent solutions &amp; high-performance backends <tspan fill="#C084FC">_</tspan>
+    </text>
+  </g>
+
+  <!-- Outer Neon Border Frame -->
+  <rect x="2" y="2" width="896" height="256" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" />
+</svg>

@@ -1,0 +1,48 @@
+<svg width="100%" height="auto" viewBox="0 0 860 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aegisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="aegisBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="858" height="108" rx="12" fill="url(#aegisBg)" stroke="url(#aegisBorder)" stroke-width="1.2" />
+  
+  <!-- Icon Circle -->
+  <g transform="translate(24, 25)">
+    <rect width="60" height="60" rx="12" fill="#0B132B" stroke="#8B5CF6" stroke-width="1" />
+    <!-- Shield / Telemetry Icon -->
+    <path d="M30 18L44 24V34C44 43 38 49 30 52C22 49 16 43 16 34V24L30 18Z" stroke="#8B5CF6" stroke-width="2" stroke-linejoin="round" />
+    <path d="M26 34L29 37L36 30" stroke="#C084FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Title & Status Badge -->
+  <g transform="translate(100, 36)">
+    <text x="0" y="0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">AegisOps AI</text>
+    <text x="110" y="-1" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14">— Autonomous IT Incident Intelligence &amp; Observability</text>
+  </g>
+
+  <!-- Tagline / Value Proposition -->
+  <g transform="translate(100, 62)">
+    <text x="0" y="0" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">
+      Correlates streaming operational telemetry, classifies anomalous signals, and accelerates automated root-cause isolation.
+    </text>
+  </g>
+
+  <!-- Tech tags -->
+  <g transform="translate(100, 88)">
+    <text x="0" y="0" fill="#C084FC" font-family="'Fira Code', monospace" font-size="11">PYTHON &bull; INCIDENT AI &bull; REST APIS &bull; DISTRIBUTED LOGS &bull; DOCKER &bull; OBSERVABILITY</text>
+  </g>
+
+  <!-- Status Pill -->
+  <g transform="translate(680, 22)">
+    <rect width="156" height="24" rx="12" fill="#1E1B4B" stroke="#8B5CF6" stroke-width="1" />
+    <circle cx="14" cy="12" r="3.5" fill="#818CF8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="24" y="16" fill="#C084FC" font-family="'Fira Code', monospace" font-size="10" font-weight="600">IN DEVELOPMENT</text>
+  </g>
+</svg>

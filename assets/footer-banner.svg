@@ -1,0 +1,76 @@
+<svg width="100%" height="100%" viewBox="0 0 900 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="50%" stop-color="#0A0F1D" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <linearGradient id="footerBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#8B5CF6;#00F5FF;#EC4899;#8B5CF6" dur="9s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#00F5FF" stop-opacity="0.9">
+        <animate attributeName="stop-color" values="#00F5FF;#EC4899;#8B5CF6;#00F5FF" dur="9s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#EC4899;#8B5CF6;#00F5FF;#EC4899" dur="9s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="quoteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <radialGradient id="footerCenterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="fGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="fGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.6" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <style>
+    .f-mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; }
+    .f-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', Helvetica, sans-serif; }
+  </style>
+
+  <!-- Box -->
+  <rect x="2" y="2" width="896" height="126" rx="14" fill="url(#footerBg)" />
+  <rect x="2" y="2" width="896" height="126" rx="14" fill="url(#fGrid)" />
+  <rect x="2" y="2" width="896" height="126" rx="14" fill="url(#footerCenterGlow)" />
+
+  <!-- Content -->
+  <g transform="translate(450, 48)" text-anchor="middle">
+    <text x="0" y="0" fill="url(#quoteGrad)" font-size="16" font-weight="600" class="f-sans" letter-spacing="0.5">
+      &ldquo;Architecting resilient systems, predictive intelligence, and production-grade software.&rdquo;
+    </text>
+  </g>
+
+  <g transform="translate(450, 82)" text-anchor="middle">
+    <text x="0" y="0" fill="#94A3B8" font-size="13" class="f-mono">
+      <tspan fill="#00F5FF">⚡</tspan> Always interested in ambitious engineering challenges &amp; research collaborations <tspan fill="#C084FC">⚡</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(450, 108)" text-anchor="middle">
+    <text x="0" y="0" fill="#64748B" font-size="11" class="f-mono">
+      Designed with precision for GitHub Profile &bull; Dhanush M C &bull; 2026
+    </text>
+  </g>
+
+  <!-- Border -->
+  <rect x="2" y="2" width="896" height="126" rx="14" fill="none" stroke="url(#footerBorder)" stroke-width="1.5" />
+</svg>
