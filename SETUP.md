@@ -101,7 +101,7 @@ Once permissions are set, trigger the action manually so your dynamic contributi
 Review these lines in [README.md](file:///c:/Users/dhanu/OneDrive/Desktop/Portfile%20files/README.md) to adjust any personal handles:
 
 - **LinkedIn URL**: Replace `https://linkedin.com/in/dhanush-m-c` with your custom LinkedIn vanity handle if different.
-- **Email Address**: Update `dhanushmc.dev@gmail.com` if you prefer an alternate contact email.
+- **Email Address**: Currently set to `dhanushmc14@gmail.com` (update if you prefer an alternate contact email).
 
 ---
 
